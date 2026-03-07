@@ -115,7 +115,7 @@ Here's a quick overview of a basic Congo project. All content is placed within t
 │   └── _default
 ├── content
 │   ├── _index.md
-│   ├── about.md
+│   ├── kurser.md
 │   └── posts
 │       ├── _index.md
 │       ├── first-post.md

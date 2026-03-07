@@ -11,14 +11,19 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Blog"
-  pageRef = "posts"
-  weight = 10
+name = "Kurser"
+pageRef = "kurser"
+weight = 10
 
 [[main]]
-  name = "Categories"
-  pageRef = "categories"
-  weight = 20
+name = "Socialdans"
+pageRef = "socialdans"
+weight = 20
+
+[[main]]
+name = "Kalender"
+pageRef = "kalender"
+weight = 30
 
 [[main]]
   name = "Tags"

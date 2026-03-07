@@ -115,7 +115,7 @@ Congoは特定のコンテンツタイプを強制しません。そのため、
 │   └── _default
 ├── content
 │   ├── _index.md
-│   ├── about.md
+│   ├── kurser.md
 │   └── posts
 │       ├── _index.md
 │       ├── first-post.md
