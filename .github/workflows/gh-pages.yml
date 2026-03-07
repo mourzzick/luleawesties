@@ -4,32 +4,42 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: # allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true # cancels outdated runs if you push again quickly
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # v3 is outdated
         with:
-          submodules: true
+          submodules: recursive # safer than 'true' for nested submodules
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3 # v2 is outdated
         with:
           hugo-version: "latest"
           extended: true
 
       - name: Build
         run: hugo --minify
+        env:
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/Stockholm # set to your timezone (Luleå = Stockholm time)
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: peaceiris/actions-gh-pages@v4 # v3 is outdated
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./public
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
