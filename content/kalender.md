@@ -6,6 +6,8 @@ menu: "main"
 weight: 30
 ---
 
+En sida med en integrerad publik Google-kalender där alla föreningens evenemang visas, till exempel kurser, socialdanser och andra aktiviteter.
+
 <div class="w-full max-w-3xl mx-auto">
   <div class="relative w-full" style="padding-bottom: 75%;">
     <iframe 

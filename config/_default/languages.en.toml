@@ -9,7 +9,7 @@ title = "Luleå Westies"
 [params]
   dateFormat = "2 January 2006"
 
-  # mainSections = ["section1", "section2"]
+  mainSections = ["aktuellt"]
   # description = "My awesome website"
 
 [params.author]

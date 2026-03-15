@@ -26,21 +26,34 @@ pageRef = "kalender"
 weight = 30
 
 [[main]]
-  name = "Tags"
-  pageRef = "tags"
-  weight = 30
+name = "Vad är WCS"
+pageRef = "vad-ar-wcs"
+weight = 40
 
 [[main]]
-  identifier = "search"
-  weight = 99
-  [main.params]
-    action = "search"
+name = "Om föreningen"
+pageRef = "om-foreningen"
+weight = 50
 
 [[main]]
-  identifier = "locale"
-  weight = 100
-  [main.params]
-    action = "locale"
+name = "Instagram"
+url = "https://www.instagram.com/luleawesties/"
+weight = 60
+[main.params]
+icon = "instagram"
+showName = false
+target = "_blank"
+
+[[main]]
+name = "Facebook"
+url = "https://www.facebook.com/profile.php?id=61586084488800"
+weight = 70
+[main.params]
+icon = "facebook"
+showName = false
+target = "_blank"
+
+
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
